@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        div{
+            border: solid 2px;
+            margin: 30px;
+            padding: 50px;
+            margin-top: 0;
+            text-align: center;
+        }
+        .parent{
+            background-color: greenyellow;
+        }
+        .child{
+            background-color: red;
+        }
+        .grand-child{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+  <div class="parent">
+    Hi, i am Parent Box
+    <div class="child">
+        Hi, i am Child Box
+        <div class="grand-child">
+            hi, i am Grand Child Box
+        </div>
+    </div>
+  </div>  
+</body>
+</html>

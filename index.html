@@ -1,96 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <title>The Resturant</title>
-    <style>
-      #home {
-        width: 100%;
-        height: 100vh;
-        background-image: url("./img/hero-bg.jpg");
-        background-size: cover;
-        position: relative;
-        padding: 0;
-      }
 
-      #home-text {
-        --bs-gutter-x: 1.5rem;
-        --bs-gutter-y: 0;
-        display: flex;
-        flex-wrap: wrap;
-        margin-top: calc(-1 * var(--bs-gutter-y));
-        margin-right: calc(-0.5 * var(--bs-gutter-x));
-        margin-left: calc(-0.5 * var(--bs-gutter-x));
-      }
-    </style>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <title>The Resturant</title>
+  <style>
+    #home {
+      width: 100%;
+      height: 100vh;
+      background-image: url("./img/hero-bg.jpg");
+      background-size: cover;
+      position: relative;
+      padding: 0;
+    }
 
-  <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
-    <nav
-      class="navbar navbar-expand-sm bg-dark navbar-dark opacity-75 fixed-top border-bottom"
-    >
-      <div class="container-fluid d-flex flex-column">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="#">The Resturant</a>
-        </div>
-        <ul class="navbar-nav flex-wrap flex-row space-around">
-          <li class="nav-item btn btn-outline-warning rounded-5 m-1">
-            <a class="nav-link text-white" href="#home">Home</a>
-          </li>
-          <li class="nav-item btn btn-outline-warning rounded-5 m-1">
-            <a class="nav-link text-white" href="#menu">Menu</a>
-          </li>
-          <li class="nav-item btn btn-outline-danger rounded-5 m-1">
-            <a class="nav-link text-white" href="#special">Special</a>
-          </li>
-          <li class="nav-item btn btn-outline-secondary rounded-3 m-1 px-1">
-            <a class="nav-link text-white" href="#about">About</a>
-          </li>
-          <li class="nav-item btn btn-outline-secondary rounded-3 m-1 px-1">
-            <a class="nav-link text-white" href="#contact">Contact</a>
-          </li>
-          <li class="nav-item btn btn-outline-secondary rounded-3 m-1 px-1">
-            <a class="nav-link text-white" href="#events">Events</a>
-          </li>
-          <li class="nav-item btn btn-outline-warning rounded-3 m-1 px-1">
-            <a class="nav-link text-white" href="#chefs">Chefs</a>
-          </li>
-          <li class="nav-item btn btn-outline-secondary rounded-3 m-1 px-1">
-            <a class="nav-link text-white" href="#gallery">Gallery</a>
-          </li>
-        </ul>
+    #home-text {
+      --bs-gutter-x: 1.5rem;
+      --bs-gutter-y: 0;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: calc(-1 * var(--bs-gutter-y));
+      margin-right: calc(-0.5 * var(--bs-gutter-x));
+      margin-left: calc(-0.5 * var(--bs-gutter-x));
+    }
+  </style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50" class="bg-dark">
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark opacity-75 fixed-top">
+    <div class="container-fluid d-flex flex-column">
+      <div class="navbar-nav flex-wrap flex-row">
+        <a class="navbar-brand fs-2 justify-content-start" href="index.html">The Resturant</a>
+        <a class="btn btn-outline-primary border border-2 m-1 mb-0 fs-5" href="#home" role="button">Home</a>
+        <a class="btn btn-outline-danger border border-2 m-1 mb-0 fs-5" href="#menu" role="button">Menu</a>
+        <a class="btn btn-outline-danger border border-2 m-1 mb-0 fs-5" href="#special" role="button">Special</a>
+        <a class="btn btn-outline-warning border border-2 m-1 mb-0 fs-5" href="#about" role="button">about</a>
+        <a class="btn btn-outline-warning border border-2 m-1 mb-0 fs-5" href="#contact" role="button">Contact</a>
+        <a class="btn btn-outline-warning border border-2 m-1 mb-0 fs-5" href="#events" role="button">Events</a>
+        <a class="btn btn-outline-warning border border-2 m-1 mb-0 fs-5" href="#chefs" role="button">Chefs</a>
+        <a class="btn btn-outline-warning border border-2 m-1 mb-0 fs-5" href="#gallery" role="button">Gallery</a>
       </div>
-    </nav>
-
-    <div class="container-fluid bg-dark">
-      <div id="home" class="container-fluid text-white">
-        <div id="home-text" 
-          class="container position-relative text-center text-lg-start pt-200"
-        >
-          <div class="col-lg-8">
-            <h1>Welcome to <span style="color: gold">Restaurantly</span></h1>
-            <h2>Delivering great food for more than 18 years!</h2>
-          </div>
-        </div>
-      </div>
-
-      <div id="menu" class="container-fluid bg-warning"></div>
-
-      <div id="special" class="container-fluid bg-secondary text-white"></div>
-      <div id="about" class="container-fluid bg-success text-white"></div>
-
-      <div id="contact" class="container-fluid bg-warning"></div>
-
-      <div id="events" class="container-fluid bg-secondary text-white"></div>
-      <div id="chefs" class="container-fluid bg-success text-white"></div>
-
-      <div id="gallery" class="container-fluid bg-warning"></div>
     </div>
-  </body>
+  </nav>
+
+  <div class="main">
+    <div id="home" class="container-fluid">
+      <h1>Welcome to <span style="color: gold">Restaurantly</span></h1>
+      <h2>Delivering great food for more than 18 years!</h2>
+    </div>
+
+    <div id="menu" class="container-fluid"></div>
+    <div id="special" class="container-fluid"></div>
+    <div id="about" class="container-fluid"></div>
+    <div id="contact" class="container-fluid"></div>
+    <div id="events" class="container-fluid"></div>
+    <div id="chefs" class="container-fluid"></div>
+    <div id="gallery" class="container-fluid"></div>
+  </div>
+</body>
+
 </html>

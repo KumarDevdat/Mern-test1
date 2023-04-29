@@ -8,57 +8,259 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <title>The Resturant</title>
   <style>
-    #home {
-      width: 100%;
-      height: 100vh;
-      background-image: url("./img/hero-bg.jpg");
-      background-size: cover;
+    body {
       position: relative;
-      padding: 0;
     }
 
-    #home-text {
-      --bs-gutter-x: 1.5rem;
-      --bs-gutter-y: 0;
-      display: flex;
-      flex-wrap: wrap;
-      margin-top: calc(-1 * var(--bs-gutter-y));
-      margin-right: calc(-0.5 * var(--bs-gutter-x));
-      margin-left: calc(-0.5 * var(--bs-gutter-x));
+    #home,
+    #menu,
+    #special,
+    #about,
+    #contact,
+    #events,
+    #chefs,
+    #gallery {
+      width: 100%;
+      height: 100vh;
+      padding-top: 150px;
+      color: #fff;
+      border: solid black;
+    }
+
+    #home {
+      background-image: url("./img/hero-bg.jpg");
+      background-size: cover;
+      padding-top: 400px;
+    }
+
+    #menu {
+      width: 100%;
+      height: auto;
+      padding-top: 0px;
+      color: #fff;
+      border: solid black;
+    }
+
+    .menu,
+    #menu-flters li {
+      display: inline-block;
+      padding: 8px 12px 10px 12px;
+      font-size: 26px;
+      line-height: 2;
+      color: hsl(54, 86%, 60%);
+      margin-bottom: 10px;
+      font-family: "Playfair Display", serif;
+      border-color: azure;
+      border-style: double;
+    }
+
+    .card {
+      width: 18rem;
+      height: fit-content;
+      background-color: white;
+      color: black;
     }
   </style>
 </head>
 
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50" class="bg-dark">
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark opacity-75 fixed-top">
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark opacity-75 fixed-bottom border">
     <div class="container-fluid d-flex flex-column">
       <div class="navbar-nav flex-wrap flex-row">
         <a class="navbar-brand fs-2 justify-content-start" href="index.html">The Resturant</a>
-        <a class="btn btn-outline-primary border border-2 m-1 mb-0 fs-5" href="#home" role="button">Home</a>
+        <a class="btn btn-outline-warning border border-2 m-1 mb-0 fs-5" href="#home" role="button">Home</a>
         <a class="btn btn-outline-danger border border-2 m-1 mb-0 fs-5" href="#menu" role="button">Menu</a>
-        <a class="btn btn-outline-danger border border-2 m-1 mb-0 fs-5" href="#special" role="button">Special</a>
-        <a class="btn btn-outline-warning border border-2 m-1 mb-0 fs-5" href="#about" role="button">about</a>
-        <a class="btn btn-outline-warning border border-2 m-1 mb-0 fs-5" href="#contact" role="button">Contact</a>
-        <a class="btn btn-outline-warning border border-2 m-1 mb-0 fs-5" href="#events" role="button">Events</a>
-        <a class="btn btn-outline-warning border border-2 m-1 mb-0 fs-5" href="#chefs" role="button">Chefs</a>
-        <a class="btn btn-outline-warning border border-2 m-1 mb-0 fs-5" href="#gallery" role="button">Gallery</a>
+        <a class="btn btn-outline-danger border border-2 m-1 mb-0 fs-5" href="#specialty" role="button">Special</a>
       </div>
     </div>
   </nav>
 
   <div class="main">
-    <div id="home" class="container-fluid">
-      <h1>Welcome to <span style="color: gold">Restaurantly</span></h1>
-      <h2>Delivering great food for more than 18 years!</h2>
+    <div id="home">
+      <div class="container-fluid d-flex align-items-center flex-column">
+        <h1>Welcome to <span style="color: gold">Restaurantly</span></h1>
+        <h2>Delivering great food for more than 18 years!</h2>
+        <div class="row dflex ontainer position-relative text-center text-lg-start">
+          <a class="btn btn-outline-warning border border-warning border-2 btn-rounded m-1 text-white" href="#menu"
+            role="button">OUR MENU</a>
+          <a class="btn btn-outline-warning border border-warning border-2 btn-rounded m-1 text-white" href="#booking"
+            role="button">BOOK A TABLE</a>
+        </div>
+      </div>
     </div>
 
-    <div id="menu" class="container-fluid"></div>
-    <div id="special" class="container-fluid"></div>
-    <div id="about" class="container-fluid"></div>
-    <div id="contact" class="container-fluid"></div>
-    <div id="events" class="container-fluid"></div>
-    <div id="chefs" class="container-fluid"></div>
-    <div id="gallery" class="container-fluid"></div>
+    <div id="menu" class="container-fluid" style="padding-top: 0px">
+      <nav class="navbar navbar-expand-sm bg-danger navbar-dark opacity-75 fixed-top" ;>
+        <div class="container-fluid d-flex flex-column">
+          <div class="navbar-nav flex-wrap flex-row">
+            <a class="navbar-brand fs-2 justify-content-start" href="#menu"><i>Menu ~</i></a>
+            <a class="btn btn-outline-warning border border-2 m-1 mb-0 fs-5" href="#starters" role="button">Starters</a>
+            <a class="btn btn-outline-warning border border-2 m-1 mb-0 fs-5" href="#salads" role="button">Salads</a>
+            <a class="btn btn-outline-warning border border-2 m-1 mb-0 fs-5" href="#specialty"
+              role="button">Speciality</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div id="starters" class="container-fluid d-flex justify-content-evenly"
+      style="margin-bottom: 100vh; padding: 20px">
+      <div class="card">
+        <img class="card-img-top" src="./img/menu/lobster-bisque.jpg" alt="Card image cap" />
+        <div class="card-body">
+          <h5 class="card-title">Lobster Bisque<span>~ $5.95</span></h5>
+          <p class="card-text">Lorem, deren, trataro, filede, nerada</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card-img-top" src="./img/menu/cake.jpg" alt="Card image cap" />
+        <div class="card-body">
+          <h5 class="card-title">Crab Cake<span>~ $7.95</span></h5>
+          <p class="card-text">
+            A delicate crab cake served on a toasted roll with lettuce and
+            tartar sauce
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card-img-top" src="./img/menu/mozzarella.jpg" alt="Card image cap" />
+        <div class="card-body">
+          <h5 class="card-title">Mozzarella Stick<span>~ $4.95</span></h5>
+          <p class="card-text">Lorem, deren, trataro, filede, nerada</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="salads" class="container-fluid d-flex justify-content-evenly" style="margin-bottom: 100vh; padding: 20px">
+      <div class="card">
+        <img class="card-img-top" src="./img/menu/caesar.jpg" alt="Card image cap" />
+        <div class="card-body">
+          <h5 class="card-title">Caesar Selections<span>$8.95</span></h5>
+          <p class="card-text">Lorem, deren, trataro, filede, nerada</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card-img-top" src="./img/menu/greek-salad.jpg" alt="Card image cap" />
+        <div class="card-body">
+          <h5 class="card-title">Greek Salad<span>$9.95</span></h5>
+          <p class="card-text">
+            Fresh spinach, crisp romaine, tomatoes, and Greek olives
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card-img-top" src="./img/menu/spinach-salad.jpg" alt="Card image cap" />
+        <div class="card-body">
+          <h5 class="card-title">Spinach Salad<span>$9.95</span></h5>
+          <p class="card-text">
+            Fresh spinach with mushrooms, hard boiled egg, and warm bacon
+            vinaigrette
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="specialty" class="container-fluid d-flex justify-content-evenly"
+      style="margin-bottom: 100vh; padding: 20px">
+      <div class="card">
+        <img class="card-img-top" src="./img/menu/bread-barrel.jpg" alt="Card image cap" />
+        <div class="card-body">
+          <h5 class="card-title">Bread Barrel<span>~ $6.95</span></h5>
+          <p class="card-text">Lorem, deren, trataro, filede, nerada</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card-img-top" src="./img/menu/tuscan-grilled.jpg" alt="Card image cap" />
+        <div class="card-body">
+          <h5 class="card-title">Tuscan Grilled<span>~ $9.95</span></h5>
+          <p class="card-text">
+            Grilled chicken with provolone, artichoke hearts, and roasted red
+            pesto
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card-img-top" src="./img/menu/lobster-roll.jpg" alt="Card image cap" />
+        <div class="card-body">
+          <h5 class="card-title">Lobster Roll<span>~ $12.95</span></h5>
+          <p class="card-text">
+            Plump lobster meat, mayo and crisp lettuce on a toasted bulky roll
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="booking" class="container-fluid" style="height: 100vh;">
+      <div class="section-title">
+        <h2>Reservation</h2>
+        <p>Book a Table</p>
+      </div>
+
+      <form action="forms/book-a-table.php" method="post" role="form" class="php-email-form aos-init aos-animate"
+        data-aos="fade-up" data-aos-delay="100">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 form-group">
+            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4"
+              data-msg="Please enter at least 4 chars" data-ddg-inputtype="identities.fullName" />
+            <div class="validate"></div>
+          </div>
+          <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
+            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email"
+              data-msg="Please enter a valid email" data-ddg-inputtype="identities.emailAddress"
+              data-ddg-autofill="true" style="
+                  background-size: auto 26px !important;
+                  background-position: right center !important;
+                  background-repeat: no-repeat !important;
+                  background-origin: content-box !important;
+                  background-image: url('chrome-extension://bkdgflcldnnnapblkhphbgpggdiikppg/img/logo-small.svg') !important;
+                  transition: background 0s ease 0s !important;
+                " />
+            <div class="validate"></div>
+          </div>
+          <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
+            <input type="text" class="form-control" name="phone" id="phone" placeholder="Your Phone"
+              data-rule="minlen:4" data-msg="Please enter at least 4 chars" data-ddg-inputtype="identities.phone" />
+            <div class="validate"></div>
+          </div>
+          <div class="col-lg-4 col-md-6 form-group mt-3">
+            <input type="text" name="date" class="form-control" id="date" placeholder="Date" data-rule="minlen:4"
+              data-msg="Please enter at least 4 chars" data-ddg-inputtype="unknown" />
+            <div class="validate"></div>
+          </div>
+          <div class="col-lg-4 col-md-6 form-group mt-3">
+            <input type="text" class="form-control" name="time" id="time" placeholder="Time" data-rule="minlen:4"
+              data-msg="Please enter at least 4 chars" data-ddg-inputtype="unknown" />
+            <div class="validate"></div>
+          </div>
+          <div class="col-lg-4 col-md-6 form-group mt-3">
+            <input type="number" class="form-control" name="people" id="people" placeholder="# of people"
+              data-rule="minlen:1" data-msg="Please enter at least 1 chars" data-ddg-inputtype="unknown" />
+            <div class="validate"></div>
+          </div>
+        </div>
+        <div class="form-group mt-3">
+          <textarea class="form-control" name="message" rows="5" placeholder="Message"></textarea>
+          <div class="validate"></div>
+        </div>
+        <div class="mb-3">
+          <div class="loading">Loading</div>
+          <div class="error-message"></div>
+          <div class="sent-message">
+            Your booking request was sent. We will call back or send an Email
+            to confirm your reservation. Thank you!
+          </div>
+        </div>
+        <div class="text-center">
+          <button type="submit">Book a Table</button>
+        </div>
+      </form>
+    </div>
   </div>
 </body>
 
